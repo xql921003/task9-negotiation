@@ -1,0 +1,336 @@
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/mycss.css" media="all" />
+<script src="./js/myjs.js"></script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Negotiation Task UI Demo</title>
+
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+</head>
+
+<body>
+	<!--     <div class="image-container set-full-height" style="background-image: url('http://demoas.creative-tim.com/material-bootstrap-wizard/assets/img/wizard-book.jpg')"> -->
+
+		<!--   Big container   -->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2">
+					<!-- Wizard container -->
+					<div class="wizard-container">
+						<div class="card wizard-card" data-color="blue" id="wizard">
+							<form action="" method="">
+								<!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+								<div class="wizard-header">
+									<h3 class="wizard-title">
+										Customize Your Bids
+									</h3>
+									<h5>Please follow the following steps to create your bids.</h5>
+								</div>
+								<div class="wizard-navigation">
+									<ul>
+										<li><a href="#details" data-toggle="tab">Step 1</a></li>
+										<li><a href="#captain" data-toggle="tab">Step 2</a></li>
+										<li><a href="#description" data-toggle="tab">Step 3</a></li>
+										<li><a href="#nonprice" data-toggle="tab">Step 4</a></li>
+									</ul>
+								</div>
+
+								<div class="tab-content">
+									<div class="tab-pane" id="details">
+										<div class="row">
+											<div class="col-sm-12">
+												<h4 class="info-text"> Set up the bidding bundles:</h4>
+											</div>
+											<div class="col-sm-12">
+												<div class="col-sm-2">
+													<h5 class="info-text"> Bundle 1:</h5>
+												</div>
+												<div class="col-sm-10">
+													<table class="table">
+														<thead>
+															<tr class="table-secondary">
+																<th scope="col">Lanes</th>
+																<th scope="col">Price</th>
+																<th scope="col">Volume</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>from: Pittsburgh to: New York</td>
+																<td>$1000 per truck</td>
+																<td>50</td>
+															</tr>
+															<tr>
+																<td>from: New York to: Boston</td>
+																<td>$800 per truck</td>
+																<td>95</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+
+											</div>
+
+											<div class="col-sm-12" id="add-lane">
+												<div class="col-sm-2">
+												</div>
+												<div class="col-sm-10">
+													<input type='button' class='btn btn-fill btn-success btn-sm' name='add-lane' value='Add Lane' onclick="toggleShow()"/>
+												</div>
+											</div>
+
+											<div class="col-sm-12" id = "lane-input" style="display: none;">
+												<div class="col-sm-2">
+												</div>
+												<div class="col-sm-10">
+													<div class="row">
+														<div class="col-sm-2">
+															<div class="form-group label-floating">
+																<label class="control-label">Origin</label>
+																<select class="form-control">
+																	<option disabled="" selected=""></option>
+																	<option value="Afghanistan"> Pittsburgh </option>
+																	<option value="Albania"> Cleveland </option>
+																	<option value="Algeria"> Baltimore </option>
+																	<option value="American Samoa"> Louisville </option>
+																	<option value="Andorra"> NewYork </option>
+																	<option value="...">...</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-sm-2">
+															<div class="form-group label-floating">
+																<label class="control-label">Destination</label>
+																<select class="form-control">
+																	<option disabled="" selected=""></option>
+																	<option value="Afghanistan"> Pittsburgh </option>
+																	<option value="Albania"> Cleveland </option>
+																	<option value="Algeria"> Baltimore </option>
+																	<option value="American Samoa"> Louisville </option>
+																	<option value="Andorra"> NewYork </option>
+																	<option value="...">...</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-sm-2">
+															<div class="input-group">
+																<span class="input-group-addon">
+																	<i class="material-icons">attach_money</i>
+																</span>
+																<div class="form-group label-floating">
+																	<label class="control-label">Price</label>
+																	<input name="name" type="text" class="form-control">
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-2">
+															<div class="input-group">
+																<span class="input-group-addon">
+																	<i class="material-icons">airport_shuttle</i>
+																</span>
+																<div class="form-group label-floating">
+																	<label class="control-label">Volume</label>
+																	<input name="name" type="text" class="form-control">
+																</div>
+															</div>
+														</div>
+														<div class="col-sm-2">
+															<div class="input-group">
+																<div class="form-group label-floating">
+																	<input type='button' class='btn btn-fill btn-success btn-sm' name='save-lane' value='Save' onclick="toggleShow();" />
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											
+										</div>
+									</div>
+									<div class="tab-pane" id="captain">
+										<h4 class="info-text">Pick the bundles that you don't want to supply at the same time: </h4>
+										<div class="row">
+											<div class="col-sm-10 col-sm-offset-1">
+												<div class="col-sm-4">
+													<div class="form-group label-floating">
+														<label class="control-label"></label>
+														<select class="form-control">
+															<option disabled="" selected=""></option>
+															<option value="Afghanistan"> Bundle 1 </option>
+															<option value="Albania"> Bundle 2 </option>
+															<option value="Algeria"> Bundle 3 </option>
+															<option value="...">...</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-sm-4">
+
+													<div class="form-group label-floating">
+
+														<label class="control-label"></label>
+														<select class="form-control">
+															<option disabled="" selected=""></option>
+															<option value="Afghanistan"> Bundle 1 </option>
+															<option value="Albania"> Bundle 2 </option>
+															<option value="Algeria"> Bundle 3 </option>
+															<option value="...">...</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type='button' class='btn btn-fill btn-primary btn-sm' name='add-conflict-bundle' value='Add a bundle' />
+															<input type='button' class='btn btn-fill btn-primary btn-sm' name='save-lane' value='Save' />
+														</div>
+
+													</div>
+
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-10 col-sm-offset-1">
+											<input type='button' class='btn btn-fill btn-warning btn-sm' name='add-conflict-bundles' value='Add another group' />
+										</div>
+
+									</div>
+									<div class="tab-pane" id="description">
+										<h4 class="info-text">Tell us the discount you are willing to give: </h4>
+										<div class="row">
+											<div class="col-sm-10 col-sm-offset-1">
+												<div class="col-sm-9">
+													<div class="input-group">
+																
+																<div class="form-group label-floating">
+																	<input name="name" type="text" class="form-control">
+																</div>
+																<span class="input-group-addon">
+																	<h4>% if total volume is greater than </h4>
+																</span>
+																<div class="form-group label-floating">
+														<label class="control-label"></label>
+														<select class="form-control">
+															<option disabled="" selected=""></option>
+															<option value="Afghanistan"> 100 </option>
+															<option value="Albania"> 150 </option>
+															<option value="Algeria"> 200 </option>
+															<option value="...">...</option>
+														</select>
+													</div>
+
+															</div>
+												</div>
+												<div class="col-sm-3">
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type='button' class='btn btn-fill btn-primary btn-sm' name='save-discount' value='Save' />
+														</div>
+
+													</div>
+
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-10 col-sm-offset-1">
+											<input type='button' class='btn btn-fill btn-warning btn-sm' name='add-conflict-bundles' value='Add another discount' />
+										</div>
+									</div>
+									<div class="tab-pane" id="nonprice">
+										<h4 class="info-text">Provide additional requirements and information: </h4>
+										<div class="row">
+											<div class="col-sm-10 col-sm-offset-1">
+												<div class="col-sm-4">
+													<div class="input-group">
+																<span class="input-group-addon">
+																	<h4>CDOT:</h4>
+																</span>
+																<div class="form-group label-floating">
+																	<input name="name" type="text" class="form-control">
+																</div>
+												</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-10 col-sm-offset-1">
+												<div class="col-sm-7">
+													<div class="input-group">
+																<span class="input-group-addon">
+																	<h4>Preferred equipment:</h4>
+																</span>
+																<div class="form-group label-floating">
+																	<input name="name" type="text" class="form-control">
+																</div>
+												</div>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-10 col-sm-offset-1">
+												<div class="col-sm-7">
+													<div class="input-group">
+																<span class="input-group-addon">
+																	<h4>Max distance willing to supply:</h4>
+																</span>
+																<div class="form-group label-floating">
+																	<input name="name" type="text" class="form-control">
+																</div>
+												</div>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-10 col-sm-offset-1">
+											<input type='button' class='btn btn-fill btn-warning btn-sm' name='add-conflict-bundles' value='Save' />
+										</div>
+									</div>
+								</div>
+								<div class="wizard-footer">
+									<div class="pull-right">
+										<input type='button' class='btn btn-next btn-fill btn-info btn-wd' name='next' value='Next' />
+										<input type='button' class='btn btn-finish btn-fill btn-info btn-wd' name='finish' value='Finish' />
+									</div>
+									<div class="pull-left">
+										<input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+
+										<div class="footer-checkbox">
+											<div class="col-sm-12">
+												<div class="checkbox">
+													<input type='button' class='btn btn-fill btn-warning btn-wd' name='add-bundle' value='Add Bundle' />
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</form>
+						</div>
+					</div> <!-- wizard container -->
+				</div>
+			</div> <!-- row -->
+		</div> <!--  big container -->
+		<!-- 	</div> -->
+	</body>
+	<script>
+		function toggleShow() {
+			var x = document.getElementById("lane-input");
+			var y = document.getElementById("add-lane");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+				y.style.display = "none";
+			} else {
+				x.style.display = "none";
+				y.style.display = "block";
+			}
+		}
+	</script>
+	</html>
