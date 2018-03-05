@@ -1,0 +1,481 @@
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/mycss.css" media="all" />
+<script src="./js/myjs.js"></script>
+
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>Negotiation Task UI Demo</title>
+
+	<!--     Fonts and icons     -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+</head>
+
+<body>
+	<!--     <div class="image-container set-full-height" style="background-image: url('http://demoas.creative-tim.com/material-bootstrap-wizard/assets/img/wizard-book.jpg')"> -->
+
+		<!--   Big container   -->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2">
+					<!-- Wizard container -->
+					<div class="wizard-container">
+						<div class="card wizard-card" data-color="blue" id="wizard">
+							<form action="" method="">
+								<!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
+
+								<div class="wizard-header">
+									<h3 class="wizard-title">
+										Scenerio Builder
+									</h3>
+									<h5>Please follow the following steps to build your scenios for testing.</h5>
+								</div>
+								<div class="wizard-navigation">
+									<ul>
+										<li><a href="#addrules" data-toggle="tab">Step 1</a></li>
+										<li><a href="#applyrules" data-toggle="tab">Step 2</a></li>
+										<li><a href="#confirm" data-toggle="tab">Step 3</a></li>
+									</ul>
+								</div>
+
+								<div class="tab-content">
+									<div class="tab-pane" id="addrules">
+										<div class="row">
+											<div class="col-sm-12">
+												<div class="col-sm-8">
+													<div class="input-group">
+																<span class="input-group-addon">
+																	<h4>Current Scenorio Name:</h4>
+																</span>
+																<div class="form-group label-floating">
+																	<input name="name" type="text" class="form-control">
+																</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-12">
+												<div class="col-sm-8">
+													<div class="input-group">
+																<span class="input-group-addon">
+																	<h4>Scenorio Applied to Bid Round:</h4>
+																</span>
+																<div class="form-group label-floating">
+																	<input name="name" type="text" class="form-control" placeholder=" Currently in Bid Round 1">
+																</div>
+													</div>
+												</div>
+											</div>
+											<div class="col-sm-12">
+												<h4 class="info-text"><b> Step 1: Select a rule and define the necessary parameters.</b></h4>
+											</div>
+											<div class="row">
+												<div class="col-sm-10 col-sm-offset-1" style="margin-top: -30px">
+												<div class="col-sm-12">
+
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon">
+															<h4>Require at least</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+														<span class="input-group-addon">
+															<h4>carriers.</h4>
+														</span>
+													</div>
+
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon">
+															<h4>Allow a maximum of</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+														<span class="input-group-addon">
+															<h4>carriers.</h4>
+														</span>
+													</div>
+
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon">
+															<h4>Require between</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+														<span class="input-group-addon">
+															<h4>and</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+														<span class="input-group-addon">
+															<h4>carriers.</h4>
+														</span>
+													</div>
+
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon">
+															<h4>Award at least</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+														<span class="input-group-addon">
+															<h4>% of total business (valued by total volume) to</h4>
+														</span>
+														<select class="form-control">
+															<option disabled="" selected=""></option>
+															<option value="Afghanistan"> ABC Carrier </option>
+															<option value="Albania"> EDF Carrier </option>
+															<option value="Algeria"> Ebiz Carrier </option>
+															<option value="...">...</option>
+														</select>
+													</div>
+
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon">
+															<h4>Award at most</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+														<span class="input-group-addon">
+															<h4>% of total business (valued by total volume) to</h4>
+														</span>
+														<select class="form-control">
+															<option disabled="" selected=""></option>
+															<option value="Afghanistan"> ABC Carrier </option>
+															<option value="Albania"> EDF Carrier </option>
+															<option value="Algeria"> Ebiz Carrier </option>
+															<option value="...">...</option>
+														</select>
+													</div>
+
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon">
+															<h4>Require an average CDOT (valued by total volume) of</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+														<span class="input-group-addon">
+															<h4>%</h4>
+														</span>
+													</div>
+
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon">
+															<h4>Exclude carriers of CDOT lower than</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+														<span class="input-group-addon">
+															<h4>%</h4>
+														</span>
+													</div>
+
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon">
+															<h4>Favor carriers of CDOT more than</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+														<span class="input-group-addon">
+															<h4>% by</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+														<span class="input-group-addon">
+															<h4>%</h4>
+														</span>
+													</div>
+
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon">
+															<h4>Penalize carriers of CDOT less than</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+														<span class="input-group-addon">
+															<h4>% by</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+														<span class="input-group-addon">
+															<h4>%</h4>
+														</span>
+													</div>
+
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon">
+															<h4>Require an average rating (valued by total volume) of</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+													</div>
+
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon">
+															<h4>Exclude carriers of ratings lower than</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+													</div>
+
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon">
+															<h4>Favor carriers of ratings more than</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+														<span class="input-group-addon">
+															<h4>by</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+														<span class="input-group-addon">
+															<h4>%</h4>
+														</span>
+													</div>
+
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon">
+															<h4>Penalize carriers of ratings less than</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+														<span class="input-group-addon">
+															<h4>by</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+														<span class="input-group-addon">
+															<h4>%</h4>
+														</span>
+													</div>
+
+												</div>
+											</div>
+										</div>
+										</div>
+									</div>
+									<!-- Step 2 -->
+									<div class="tab-pane" id="applyrules">
+										<div class="row">
+											<div class="col-sm-12">
+													<h4 class="info-text"><b> Step 2: Apply these rules.</b></h4>
+													<div class="col-sm-12" style="text-align:center">
+													<input type="radio" id="1">
+													<label for="1"style="color: black"><h4>&nbsp;Everywhere.</h4></label>
+													</div>
+													<div class="col-sm-12" style="text-align:center">
+													<input type="radio" id="2">
+													<label for="1"style="color: black"><h4>&nbsp;Dry lanes only.</h4></label>
+													</div>
+													<div class="col-sm-12" style="text-align:center">
+													<input type="radio" id="2">
+													<label for="1"style="color: black"><h4>&nbsp;Refrigerated lanes only.</h4></label>
+													</div>
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon" style="color: black;">
+															<h4>On lanes from:</h4>
+														</span>
+														<select class="form-control">
+															<option disabled="" selected=""></option>
+															<option value="Afghanistan"> Pittsburgh </option>
+															<option value="Albania"> Boston </option>
+															<option value="Algeria"> New York </option>
+															<option value="...">...</option>
+														</select>
+													</div>
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon" style="color: black;">
+															<h4>On lanes to:</h4>
+														</span>
+														<select class="form-control">
+															<option disabled="" selected=""></option>
+															<option value="Afghanistan"> Pittsburgh </option>
+															<option value="Albania"> Boston </option>
+															<option value="Algeria"> New York </option>
+															<option value="...">...</option>
+														</select>
+													</div>
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon" style="color: black;">
+															<h4>In these regions only:</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+													</div>
+													<div class="input-group">
+														<div class="form-group label-floating">
+															<input type="radio">
+														</div>
+														<span class="input-group-addon" style="color: black;">
+															<h4>In all other regions except from the following:</h4>
+														</span>
+														<div class="form-group label-floating">
+															<input name="name" type="text" class="form-control">
+														</div>
+													</div>
+											</div>
+										</div>
+									</div>
+									<!-- Step 3 -->
+
+
+									<div class="tab-pane" id="confirm">
+										<div class="row">
+											<div class="col-sm-12">
+													<h4 class="info-text"><b> Step 3: Review and confirm.</b></h4>
+													<div class="col-sm-12">
+														<div class="col-sm-2">
+															<h5 class="info-text">Everywhere:</h5>
+														</div>
+														<div class="col-sm-10">
+															<table class="table">
+																<thead>
+																	<tr class="table-secondary">
+																		<th scope="col">Scenerios</th>
+																		<th scope="col">Parameters</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>Maximum number of carrier allowed</td>
+																		<td>20</td>
+																	</tr>
+																	<tr>
+																		<td>Average rating (valued by total volume)</td>
+																		<td>4.5</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+													<div class="col-sm-12">
+														<div class="col-sm-2">
+															<h5 class="info-text">Dry only:</h5>
+														</div>
+														<div class="col-sm-10">
+															<table class="table">
+																<thead>
+																	<tr class="table-secondary">
+																		<th scope="col">Scenerios</th>
+																		<th scope="col">Parameters</th>
+																	</tr>
+																</thead>
+																<tbody>
+																	<tr>
+																		<td>Average CDOT (valued by total volume)</td>
+																		<td>95%</td>
+																	</tr>
+																</tbody>
+															</table>
+														</div>
+													</div>
+											</div>
+										</div>
+									</div>
+
+
+
+									<!-- Footer -->
+									<div class="wizard-footer">
+										<div class="pull-right">
+											<input type='button' class='btn btn-next btn-fill btn-info btn-wd' name='next' value='Next' />
+											<input type='button' class='btn btn-finish btn-fill btn-info btn-wd' name='finish' value='Finish' />
+										</div>
+										<div class="pull-left">
+											<input type='button' class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+										</div>
+										<div class="clearfix"></div>
+									</div>
+
+					</div> <!-- wizard container -->
+				</div>
+			</div> <!-- row -->
+		</div> <!--  big container -->
+		<!-- 	</div> -->
+	</body>
+	<script>
+		function toggleShow() {
+			var x = document.getElementById("lane-input");
+			var y = document.getElementById("add-lane");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+				y.style.display = "none";
+			} else {
+				x.style.display = "none";
+				y.style.display = "block";
+			}
+		}
+	</script>
+	</html>
